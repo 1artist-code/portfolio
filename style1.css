@@ -1,0 +1,60 @@
+*{
+    
+    background-color: rgba(109, 159, 120, 0.954);
+     
+    
+ 
+ }
+ 
+ .heading{
+    text-align: center;
+    font-family: "Eagle Lake";
+    color:rgb(41, 74, 63);
+    font-weight: bolder;
+    font-size: 25px;
+    text-shadow: 2px 2px 4px rgba(255, 247, 247, 0.5);
+ }
+
+ .form{
+    
+    text-align: justify;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family:"eagle Lake";
+    font-size: 15px;
+
+   
+
+    
+
+
+    
+ }
+
+
+ .ques{
+    color:rgb(225, 255, 161);
+    text-align: center;
+    font-size: 19px;
+}
+
+button{
+    width:100px;
+    padding: 15px 0;
+    padding-bottom: 15px;
+    text-align: center;
+    margin:20px 10px;
+    border-radius:25px;
+    font-weight: bold;
+    border:2px solid rgb(25, 59, 30);
+    background: green;
+    color:rgb(245, 255, 245);
+    cursor:pointer;
+    position: relative;
+    overflow:hidden;
+    left:44%;
+    font-family: "Eagle Lake";
+    font-size:large;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    
+}
+

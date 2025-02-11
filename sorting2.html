@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=MedievalSharp&display=swap" rel="stylesheet">
+<title>
+    quiz page
+</title>
+<body>
+<head>
+    <div class="heading">
+    <h4 >Let the sorting begin....</h4>
+    <hr>
+</div>
+</head>
+<div class="form">
+    <form>
+<div class="ques">
+
+        <br><br>
+        <label for="ques1">You find a magical mirror that shows not your reflection,<br> 
+            but the one thing you desire most. You see something that makes your heart ache with longing.
+            <br> What do you do?</label>
+            </div>
+            <br><br>
+            <input type="radio" id="opt1" name="ques1" value="ravenclaw">
+             <label for="opt1">Study the mirror to understand how it works.</label>
+             <br>
+             <input type="radio" id="opt2" name="ques1" value="hufflepuff">
+             <label for="opt2">Turn away immediately. </label>
+             <br>
+             <input type="radio" id="opt3" name="ques1" value="slytherin">
+             <label for="opt3">Try to reach into the mirror to claim what you see.</label>
+             <br>
+             <input type="radio" id="opt4" name="ques1" value="gryffindor">
+             <label for="opt4">Keep looking, even though it hurts.</label>
+<br><br>
+          
+<div class="ques">
+        <label for="ques2">Imagine you’re holding a powerful magical artifact.<br> 
+            It grants unlimited influence over people’s minds—but using it even once will leave a permanent mark on your soul. 
+            <br>Would you use it?</label>
+            <br><br>
+        </div>
+            <input type="radio" id="opt5" name="ques2" value="gryffindor">
+            <label for="opt5">Yes, if the cause is just. </label>
+            <br>
+            <input type="radio" id="opt6" name="ques2"  value="hufflepuff">
+            <label for="opt6">No, because true change comes through understanding, not control.  </label>
+            <br>
+            <input type="radio" id="opt7" name="ques2" value="slytherin">
+            <label for="opt7">Yes, but only if it benefits me directly.</label>
+            <br>
+            <input type="radio" id="opt8" name="ques2" value="ravenclaw">
+            <label for="opt8">No, because the temptation of power is the real danger.</label>
+<br><br>
+<div class="ques">
+        <label for="ques3">You meet a stranger who offers you a potion with no label.
+            They claim it will reveal a hidden truth about yourself—but once taken, <br>
+            you can never forget what you learn.<br> Do you drink it?</label>
+            <br><br>
+        </div>
+            <input type="radio" id="opt9" name="ques3" value="ravenclaw">
+            <label for="opt9">Yes. The pursuit of self-awareness outweighs the risk.</label>
+            <br>
+            <input type="radio" id="opt10" name="ques3"  value="hufflepuff">
+            <label for="opt10">No. Some truths are burdens too heavy to bear.   </label>
+            <br>
+            <input type="radio" id="opt11" name="ques3" value="slytherin">
+            <label for="opt11">Yes, but only if I know what the cost will be. Control over consequences is key.</label>
+            <br>
+            <input type="radio" id="opt12" name="ques3" value="gryffindor">
+            <label for="opt12">I’d drink it without hesitation. Knowledge is worth any price. </label>
+<br><br>
+<div class="ques">
+        <label for="ques4">You’ve been given the opportunity to rewrite one memory from your past.<br>
+            However, changing it will erase all the lessons you learned from that experience. <br>What do you do?</label>
+            <br><br></div>
+            <input type="radio" id="opt13" name="ques4" value="slytherin">
+            <label for="opt13">Change it. Regret holds more weight than lessons.  </label>
+            <br>
+            <input type="radio" id="opt14" name="ques4" value="gryffindor">
+            <label for="opt14"> Keep it. Pain shapes who we are.  </label>
+            <br>
+            <input type="radio" id="opt15" name="ques4" value="ravenclaw" >
+            <label for="opt15">Analyze the memory first—some lessons are overrated</label>
+            <br>
+            <input type="radio" id="opt16" name="ques4"  value="hufflepuff">
+            <label for="opt16"> Refuse both options. The past is sacred, even with its scars. </label>
+ <br><br>
+ <div class="ques">
+        <label for="ques5"> What frightens you the most?</label>
+        <br><br></div>
+            <input type="radio" id="opt17" name="ques5" value="gryffindor">
+            <label for="opt17">Being powerless in a moment that truly matters.  </label>
+            <br>
+            <input type="radio" id="opt18" name="ques5" value="slytherin">
+            <label for="opt18">  Being forgotten after I’m gone.  </label>
+            <br>
+            <input type="radio" id="opt19" name="ques5" value="ravenclaw" >
+            <label for="opt19">Discovering that everything I believed was a lie.</label>
+            <br>
+            <input type="radio" id="opt20" name="ques5" value="hufflepuff">
+            <label for="opt20"> Losing the people I love, even if I never lose myself. </label>
+
+            <br><br>  <br><br> 
+    <button type="button" onclick="calculate()"><span></span>results</button>
+    <div id="result" class="result"></div>
+</div>
+    <br><br> <br><br>
+    </form>
+
+
+<script>
+
+    function calculate()
+    {
+
+            let gryffindor=0;
+            let slytherin=0;
+            let hufflepuff=0;
+            let ravenclaw=0;
+            const totalQuestions = 5;  
+            let answeredCount = 0; 
+
+
+            for(let i=0;i<5;i++)
+            {
+                const question = document.querySelector(`input[name="ques${i+1}"]:checked`)
+                if (question) {
+                    answeredCount++;  
+                }
+                if(question)
+            {
+                switch(question.value)
+                {
+                    case "gryffindor":
+                        gryffindor++;
+                    break;
+
+                    case "slytherin":
+                        slytherin++
+                    break;
+
+                    case "hufflepuff":
+                        hufflepuff++;
+                    break;
+                    case "ravenclaw":
+                        ravenclaw++;
+                    break;
+                }
+
+            }
+        }
+
+        if (answeredCount < totalQuestions) {
+        alert(`Please answer all the questions before submitting!`);
+        return; // Stop the function from proceeding
+    }
+
+            if(gryffindor>slytherin && gryffindor>hufflepuff && gryffindor>ravenclaw)
+            {
+                const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ` <strong>gryffindor</strong>!`;
+            }
+
+            else if(slytherin>gryffindor && slytherin>hufflepuff && slytherin>ravenclaw)
+            {
+                const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ` <strong>slytherin</strong>!`;
+            }
+            else if(hufflepuff>ravenclaw && hufflepuff>slytherin && hufflepuff>gryffindor)
+            {
+                const resultDiv = document.getElementById("result");
+                resultDiv.innerHTML = ` <strong>hufflepuff</strong>!`; 
+            }
+            else if(ravenclaw>gryffindor && ravenclaw>hufflepuff && ravenclaw>slytherin)
+            {
+                const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ` <strong>ravenclaw</strong>!`;
+            }
+            else if(ravenclaw==gryffindor && slytherin==hufflepuff)
+            {
+                const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `<strong>you seem confused ..hmm.. you belong in gryffindor!</strong>!`;
+            }
+            else
+            {
+                const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ` <strong>hmm..interesting very interesting ... RAVENCLAW!!</strong>!`;
+            }
+
+
+        
+    }
+</script>
+
+</body>
+</html>
